@@ -10,6 +10,7 @@ public class ExibirInformacoes {
         System.out.println("Informações sobre o produto");
         System.out.println("Nome: " + produto.getNome());
         System.out.println("Preço: " + produto.getPreco());
+        System.out.println("Desconto ganho: " + produto.getTipoProduto().calcularDescontoProduto(produto.getPreco()));
         System.out.println("Categoria: " + produto.getTipoProduto());
         if (produto instanceof Celular){
             Celular celular = (Celular) produto;
@@ -21,9 +22,12 @@ public class ExibirInformacoes {
     }
 
     public static void exibirInformacaoFuncionario(Funcionario funcionario){
-        System.out.println("Innformações sobre o funcionario");
+        System.out.println("Relatorio de funcionario");
         System.out.println("Nome: " + funcionario.getNome());
-        System.out.println("Salário: " + funcionario.getSalario());
-        System.out.println("Cargo: " + funcionario.getTipoFuncionario());
+        System.out.println("Cargo: " + funcionario.getTipoFuncionario().getCargo());
+        System.out.println("Função: " + funcionario.getTipoFuncionario().getFuncao());
+        System.out.println("Salário: " + funcionario.getTipoFuncionario().getSalario());
+        System.out.println("Identificador: " + funcionario.getTipoFuncionario().getId());
     }
+
 }
